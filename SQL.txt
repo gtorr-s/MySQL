@@ -1,0 +1,28 @@
+create database facu;
+USE facu;
+
+create table admin(
+	usuario varchar(40),
+    senha varchar(40),
+    primary key(usuario)
+);
+
+create table paciente(
+	CPF varchar(11),
+    nome varchar(40),
+    email varchar(40),
+    telefone varchar(14),	
+    nascimento varchar(11),
+    primary key(CPF)
+);
+
+create table atendimento(
+	id int primary key auto_increment,
+    CPF varchar(11),
+	nome varchar(40),
+    diagnostico varchar(40),
+    atendimentoData varchar(11)
+);
+
+select * from paciente;
+insert into admin(usuario, senha) values("admin", "admin");
